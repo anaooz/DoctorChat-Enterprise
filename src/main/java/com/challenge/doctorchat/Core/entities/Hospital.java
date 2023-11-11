@@ -1,7 +1,7 @@
-package com.challenge.doctorchat;
+package com.challenge.doctorchat.Core.entities;
 
-import com.challenge.valueObjects.CNPJ;
-import com.challenge.valueObjects.Endereco;
+import com.challenge.doctorchat.Core.valueObjects.CNPJ;
+import com.challenge.doctorchat.Core.valueObjects.Endereco;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,12 +10,10 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "Hospital")
-public class Hospital {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Hospital extends BaseEntity{
 
     private String nomeFantasia;
     private String razaoSocial;

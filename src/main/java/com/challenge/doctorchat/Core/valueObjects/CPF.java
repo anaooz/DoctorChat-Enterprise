@@ -1,20 +1,20 @@
-package com.challenge.valueObjects;
+package com.challenge.doctorchat.Core.valueObjects;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.*;
 
-import java.util.Date;
 import java.util.InputMismatchException;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Embeddable
 public class CPF {
     @Column(length = 12)
     private String CPF;
 
-    public static boolean isCPF(String CPF) { //https://www.devmedia.com.br/validando-o-cpf-em-uma-aplicacao-java/22097#:~:text=Desenvolvendo%20a%20Aplicação%20Java&text=isCPF()%20-%20retorna%20um%20valor,%3A%20999.999.999-99.
+    public static boolean validaCPF(String CPF) { //https://www.devmedia.com.br/validando-o-cpf-em-uma-aplicacao-java/22097#:~:text=Desenvolvendo%20a%20Aplicação%20Java&text=isCPF()%20-%20retorna%20um%20valor,%3A%20999.999.999-99.
         if (CPF.equals("00000000000") ||
                 CPF.equals("11111111111") ||
                 CPF.equals("22222222222") || CPF.equals("33333333333") ||

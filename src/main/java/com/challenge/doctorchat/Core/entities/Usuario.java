@@ -1,7 +1,7 @@
-package com.challenge.doctorchat;
+package com.challenge.doctorchat.Core.entities;
 
-import com.challenge.valueObjects.CPF;
-import com.challenge.valueObjects.Endereco;
+import com.challenge.doctorchat.Core.valueObjects.CPF;
+import com.challenge.doctorchat.Core.valueObjects.Endereco;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -9,12 +9,11 @@ import java.util.Date;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Table(name = "Usuário")
-public class Usuario {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@Table(name = "Usuario")
+public class Usuario extends BaseEntity{
+
     private String nome;
     @Embedded
     private CPF CPF;

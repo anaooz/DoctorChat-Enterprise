@@ -1,4 +1,4 @@
-package com.challenge.valueObjects;
+package com.challenge.doctorchat.Core.valueObjects;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -7,6 +7,7 @@ import java.util.InputMismatchException;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Embeddable
 public class CNPJ {
     @Column(length = 15)

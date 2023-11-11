@@ -1,22 +1,19 @@
-package com.challenge.doctorchat;
+package com.challenge.doctorchat.Core.entities;
 
-import com.challenge.valueObjects.CNPJ;
-import com.challenge.valueObjects.CPF;
-import com.challenge.valueObjects.Endereco;
+import com.challenge.doctorchat.Core.valueObjects.CNPJ;
+import com.challenge.doctorchat.Core.valueObjects.CPF;
+import com.challenge.doctorchat.Core.valueObjects.Endereco;
 import jakarta.persistence.*;
-import jakarta.persistence.Id;
 import lombok.*;
 
 import java.util.List;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
-@Table(name = "Médico")
-public class Medico {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+@Table(name = "Medico")
+public class Medico extends BaseEntity{
 
     private String nome;
     @Embedded

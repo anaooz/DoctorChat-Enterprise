@@ -1,4 +1,4 @@
-package com.challenge.doctorchat;
+package com.challenge.doctorchat.Core.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,12 +8,10 @@ import java.util.List;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "Agendamento")
-public class Agendamento {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+public class Agendamento extends BaseEntity{
 
     private Date Data;
 
