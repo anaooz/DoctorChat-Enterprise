@@ -13,7 +13,10 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "Medico")
-public class Medico extends BaseEntity{
+public class Medico {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String nome;
     @Embedded

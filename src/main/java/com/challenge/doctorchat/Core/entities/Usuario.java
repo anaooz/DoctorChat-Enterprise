@@ -5,21 +5,24 @@ import com.challenge.doctorchat.Core.valueObjects.Endereco;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "Usuario")
-public class Usuario extends BaseEntity{
+public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String nome;
     @Embedded
     private CPF CPF;
     private String email;
     private String senha;
-    private Date dataDeNascimento;
+    private LocalDate dataDeNascimento;
     @Embedded
     private Endereco endereco;
 

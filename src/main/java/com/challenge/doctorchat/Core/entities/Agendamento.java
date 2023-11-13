@@ -3,7 +3,7 @@ package com.challenge.doctorchat.Core.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Data
@@ -11,9 +11,12 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "Agendamento")
-public class Agendamento extends BaseEntity{
+public class Agendamento {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    private Date Data;
+    private LocalDate Data;
 
     private String Descricao;
 
