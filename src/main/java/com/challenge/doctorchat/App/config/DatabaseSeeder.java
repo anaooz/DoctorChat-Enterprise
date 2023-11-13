@@ -20,14 +20,20 @@ import java.time.LocalDate;
 @Configuration
 public class DatabaseSeeder implements CommandLineRunner {
 
-    @Autowired
-    UsuarioRepository usuarioRepository;
+    private final UsuarioRepository usuarioRepository;
+    private final MedicoRepository medicoRepository;
+    private final HospitalRepository hospitalRepository;
 
     @Autowired
-    MedicoRepository medicoRepository;
-
-    @Autowired
-    HospitalRepository hospitalRepository;
+    public DatabaseSeeder(
+            UsuarioRepository usuarioRepository,
+            MedicoRepository medicoRepository,
+            HospitalRepository hospitalRepository
+    ) {
+        this.usuarioRepository = usuarioRepository;
+        this.medicoRepository = medicoRepository;
+        this.hospitalRepository = hospitalRepository;
+    }
 
     @Override
     public void run(String... args) throws Exception {

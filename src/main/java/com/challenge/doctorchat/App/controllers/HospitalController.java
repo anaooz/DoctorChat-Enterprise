@@ -14,8 +14,12 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/hospital")
 public class HospitalController {
+    private final HospitalRepository hospitalRepository;
+
     @Autowired
-    HospitalRepository hospitalRepository;
+    public HospitalController(HospitalRepository hospitalRepository) {
+        this.hospitalRepository = hospitalRepository;
+    }
 
     @GetMapping
     @Cacheable("hospitais")

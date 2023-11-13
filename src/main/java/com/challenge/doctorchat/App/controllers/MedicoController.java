@@ -17,8 +17,12 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/medico")
 public class MedicoController {
+    private final MedicoRepository medicoRepository;
+
     @Autowired
-    MedicoRepository medicoRepository;
+    public MedicoController(MedicoRepository medicoRepository) {
+        this.medicoRepository = medicoRepository;
+    }
 
     @GetMapping
     @Cacheable("medicos")

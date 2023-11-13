@@ -12,8 +12,12 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/usuario")
 public class UsuarioController {
+    private final UsuarioRepository usuarioRepository;
+
     @Autowired
-    UsuarioRepository usuarioRepository;
+    public UsuarioController(UsuarioRepository usuarioRepository) {
+        this.usuarioRepository = usuarioRepository;
+    }
 
     @GetMapping
     @Cacheable("usuarios")
