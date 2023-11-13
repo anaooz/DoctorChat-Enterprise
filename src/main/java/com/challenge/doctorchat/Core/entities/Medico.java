@@ -1,8 +1,6 @@
 package com.challenge.doctorchat.Core.entities;
 
-import com.challenge.doctorchat.Core.valueObjects.CNPJ;
-import com.challenge.doctorchat.Core.valueObjects.CPF;
-import com.challenge.doctorchat.Core.valueObjects.Endereco;
+import com.challenge.doctorchat.Core.valueObjects.*;
 import jakarta.persistence.*;
 import lombok.*;
 

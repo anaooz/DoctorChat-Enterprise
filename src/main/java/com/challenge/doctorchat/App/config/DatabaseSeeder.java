@@ -1,6 +1,5 @@
 package com.challenge.doctorchat.App.config;
 
-import com.challenge.doctorchat.Core.entities.Agendamento;
 import com.challenge.doctorchat.Core.entities.Hospital;
 import com.challenge.doctorchat.Core.entities.Medico;
 import com.challenge.doctorchat.Core.entities.Usuario;

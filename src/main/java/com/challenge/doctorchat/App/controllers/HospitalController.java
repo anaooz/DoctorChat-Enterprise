@@ -2,7 +2,6 @@ package com.challenge.doctorchat.App.controllers;
 
 import com.challenge.doctorchat.App.exceptions.RestNotFoundException;
 import com.challenge.doctorchat.Core.entities.Hospital;
-import com.challenge.doctorchat.Core.entities.Medico;
 import com.challenge.doctorchat.Details.repositories.HospitalRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
