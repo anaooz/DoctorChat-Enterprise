@@ -8,7 +8,8 @@
 - 94348 - Kaio Gomes Vilarinho Vieira Pereira
 ---
 
-![Arquitetura](https://github.com/anaooz/DoctorChat-Enterprise/blob/main/Arquitetura_Solucao.png)
+![image](https://github.com/anaooz/DoctorChat-Enterprise/assets/69781921/f9e31eba-a53e-4a57-8b60-28b46ab3d657)
+
 
 ---
 
